@@ -1,0 +1,235 @@
+<html>
+<head>
+<title>Home</title>
+<SCRIPT type=text/javascript src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+<!--<SCRIPT type=text/javascript src="http://loram.squarespace.com/storage/welcome-page/jquery.js"></SCRIPT>-->
+<SCRIPT type=text/javascript src="./js/links.js"></SCRIPT>
+<SCRIPT type=text/javascript>
+ $(document).ready(function() {
+   $(".boxLarge").hover(function(){ 
+     $(this).toggleClass('boxLargeHover'); 
+    });
+
+   $(".boxSmall").hover(function(){ 
+     $(this).toggleClass('boxSmallHover'); 
+    });
+	
+   $(".boxMedium").hover(function(){ 
+     $(this).toggleClass('boxMediumHover'); 
+    });
+ });
+</SCRIPT>
+<style type="text/css">
+    body
+    {
+    background-color: #ffffff;
+    text-align: center;
+    font-family: arial;
+    font-size: 8pt;
+    }
+    .container
+    {
+    width: 100%;
+    height: 662px;
+    margin: 0 auto;
+    }
+	.wrapper
+	{
+		width: 640px;
+		margin: 0 auto;
+	}
+    .boxLarge
+    {
+    float: left;
+    width: 300px;
+    margin: 10px;
+    }
+    .boxLarge a
+    {
+    
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    text-decoration:none; /* Makes sure the link   doesn't get underlined */
+    z-index:10; /* raises anchor tag above everything else in div */
+    background-color:white; /*workaround to make clickable in IE */
+    opacity: 0; /*workaround to make clickable in IE */
+    filter: alpha(opacity=1); /*workaround to make clickable in IE */
+    }
+    #boxLarge1, #boxLarge3
+    {
+    
+    }
+    .boxLargeHover
+    {
+
+    width: 300px;
+    margin: 10px;
+    top: -10px;
+    left: -5px;
+    position: relative;
+    -moz-box-shadow: 5px 5px 6px #000000;
+    -webkit-box-shadow: 5px 5px 6px #000000;
+    box-shadow: 5px 5px 6px #000000;
+    }
+    .sub
+    {
+    display: block;
+    }
+    .bottomBox
+    {
+    width: 980px;
+    height: 200px;
+    margin: 0 auto;
+    text-align: center;
+    }
+	.boxMedium
+    {
+    background-image: url('http://loram.squarespace.com/storage/welcome-page/rta_button1.png');
+    background-repeat:no-repeat;
+    width: 380px;
+    height: 160px;
+    margin: 0 auto;
+
+    }
+    .boxMedium a
+    {
+
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    text-decoration:none; /* Makes sure the link   doesn't get underlined */
+    z-index:10; /* raises anchor tag above everything else in div */
+    background-color:white; /*workaround to make clickable in IE */
+    opacity: 0; /*workaround to make clickable in IE */
+    filter: alpha(opacity=1); /*workaround to make clickable in IE */
+    }
+    .boxMediumHover
+    {
+    background-image: url('http://loram.squarespace.com/storage/welcome-page/rta_button2.png');
+    background-repeat:no-repeat;
+    width: 380px;
+    height: 160px;
+    margin: 0 auto;
+    top: -5px;
+    left: -3px;
+    }
+    .boxSmall
+    {
+    background-image: url('http://loram.squarespace.com/storage/button1.png');
+    background-repeat:no-repeat;
+    width: 164px;
+    height: 105px;
+    margin: 0 auto;
+    }
+    .boxSmall a
+    {
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    text-decoration:none; /* Makes sure the link   doesn't get underlined */
+    z-index:10; /* raises anchor tag above everything else in div */
+    background-color:white; /*workaround to make clickable in IE */
+    opacity: 0; /*workaround to make clickable in IE */
+    filter: alpha(opacity=1); /*workaround to make clickable in IE */
+    }
+    .boxSmallHover
+    {
+    background-image: url('http://loram.squarespace.com/storage/button2.png');
+    background-repeat:no-repeat;
+    width: 164px;
+    height: 105px;
+    margin: 0 auto;
+    top: -3px;
+    left: -2px;
+    }
+    #sub1b, #sub2b, #sub3b,#sub4b
+    {
+    height: 50px;
+    padding: 4px;
+    }
+    #sub1c, #sub2c, #sub3c,#sub4c
+    {
+    padding: 5px 0px 15px 0px;
+    font-size: 14pt;
+    text-decoration: none;
+    color: #ffffff;
+    }
+    #sub1c
+    {
+    color: #000000;
+    }
+    #sub1a, #sub1b, #sub1c
+    {
+    background-color: #fef200;
+    color: #000000;
+    }
+    #sub2a, #sub2b, #sub2c
+    {
+    background-color:#d2232a;
+    color: #ffffff;
+    }
+    #sub3a, #sub3b, #sub3c
+    {
+    background-color: #41ad48;
+    color: #ffffff;
+    }
+    #sub1b, #sub3b
+    {
+    font-style: italic;
+    }
+	 #sub4a, #sub4b, #sub4c
+    {
+    background-color: #0000ff;
+    color: #ffffff;
+    }
+    .boldCap
+    {
+    font-weight: bold;
+    }
+	.row	
+	{
+		margin: 0 auto;
+	}
+	.clearfix 
+	{
+		overflow: auto;
+	}
+</style>
+</head>
+<body>
+<div class="container"><div class="wrapper">
+	<div class="row clearfix">
+		<div id="boxLarge2" class="boxLarge">
+			<a id="square1" href="https://loram.csod.com/catalog/CustomPage.aspx?id=20000325">
+			<div id="sub2a" class="sub"><img id="img1" border="none" alt="" src="/clientimg/loram/welcome/img2.jpg" width="300" height="180"></div>
+			<div id="sub2b" class="sub"><span class="boldCap">I</span>ntegrity First, <span class="boldCap">C</span>ustomer Focus, <span class="boldCap">A</span>ccountable for Actions, <span class="boldCap">R</span>esults Oriented, <span class="boldCap">E</span>xcellence in All We Do!</div>
+			<div id="sub2c" class="sub">My Learning</div></a>
+		</div>
+		<div id="boxLarge1" class="boxLarge">
+			<a id="square2" href="https://loram.csod.com/EPM/Reviews/UserReview.aspx">
+			<div id="sub1a" class="sub"><img id="img2" border="none" alt="" src="/clientimg/loram/welcome/img1.jpg" width="300" height="180"></div>
+			<div id="sub1b" class="sub">Loram will be respected globally as the leader in the railway infrastructure markets we serve.</div>
+			<div id="sub1c" class="sub">My Performance</div></a>
+		</div>
+	</div>
+	<div class="row clearfix">
+		<div id="boxLarge4" class="boxLarge">
+			<a id="square3" href="https://loram.csod.com/lms/connect/connect.aspx?tab_page_id=-190001">
+			<div id="sub4a" class="sub"><img id="img3" border="none" alt="" src="/clientimg/loram/welcome/img4.png" width="300" height="180"></div>
+			<div id="sub4b" class="sub">Loram ipsum</div>
+			<div id="sub4c" class="sub">Required Railroad Credentials</div></a>
+		</div>
+		<div id="boxLarge3" class="boxLarge">
+			<a id="square4" href="https://loram.csod.com/lms/connect/connect.aspx?tab_page_id=-190001">
+			<div id="sub3a" class="sub"><img id="img4" border="none" alt="" src="/clientimg/loram/welcome/img3.jpg" width="300" height="180"></div>
+			<div id="sub3b" class="sub">Our people deliver advanced equipment, innovative solutions, and unrivaled customer service in a safe and reliable manner to maintain and improve railway infrastructure.</div>
+			<div id="sub3c" class="sub">My Connections</div></a>
+		</div>
+	</div>
+</div></div>
+</body>
+</html>

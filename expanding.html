@@ -1,0 +1,232 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Prototype</title>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script language="javascript">
+			jQuery(document).ready(function() {
+			function close_accordion_section() {
+				jQuery('.accordion .accordion-section-title').removeClass('active');
+				jQuery('.accordion .accordion-section-content').slideUp(300).removeClass('open');
+			}
+
+			jQuery('.accordion-section-title').click(function(e) {
+					// Grab current anchor value
+					var currentAttrValue = jQuery(this).attr('href');
+
+					if(jQuery(e.target).is('.active')) {
+						close_accordion_section();
+					}else {
+						close_accordion_section();
+
+						// Add active class to section title
+						jQuery(this).addClass('active');
+						// Open up the hidden content panel
+						jQuery('.accordion ' + currentAttrValue).slideDown(300).addClass('open'); 
+					}
+
+					e.preventDefault();
+				});
+			});
+		</script>
+		<script language="javascript"> 
+			function toggle(elementId) {
+				var ele = document.getElementById(elementId);
+				if(ele.style.display == "block") {
+						ele.style.display = "none";
+				}
+				else {
+					ele.style.display = "block";
+				}
+			} 
+		</script>
+		<style>
+			.wrapper
+				{
+					font-family: helvetica, Arial,sans-serif;
+				}
+			.container
+				{
+					margin: 2px;
+					padding: 5px;
+					width: 75%;
+					border: 1px solid #000000;
+				}
+			.heading
+				{
+					font-weight: bold;
+					font-size: 14pt;
+					width:100%;
+					padding:15px;
+				}
+			.hidden
+				{
+					display: none; 
+				}
+			.cell
+				{
+					float: left;
+					padding: 10px;
+				}
+			<!---------------------->
+			.accordion, .accordion * {
+				-webkit-box-sizing:border-box; 
+				-moz-box-sizing:border-box; 
+				box-sizing:border-box;
+			}
+
+			.accordion {
+				overflow:hidden;
+				box-shadow:0px 1px 3px rgba(0,0,0,0.25);
+				border-radius:3px;
+				background:#ffffff;
+			}
+
+			/*----- Section Titles -----*/
+			.accordion-section-title {
+				width:100%;
+				padding:15px;
+				display:inline-block;
+				border-bottom:1px solid #1a1a1a;
+				background:#333;
+				transition:all linear 0.15s;
+				/* Type */
+				font-size:12pt;
+				text-shadow:0px 1px 0px #1a1a1a;
+				color:#fff;
+			}
+
+			.accordion-section-title.active, .accordion-section-title:hover {
+				background:#4c4c4c;
+				/* Type */
+				text-decoration:none;
+			}
+
+			.accordion-section:last-child .accordion-section-title {
+				border-bottom:none;
+			}
+
+			/*----- Section Content -----*/
+			.accordion-section-content {
+				padding:15px;
+				display:none;
+			}
+			/*---------------------------*/
+			.imgSize {
+			  display: block;
+			  max-width:250px;
+			  max-height:100px;
+			  width: auto;
+			  height: auto;
+			}
+		</style>
+	</head>
+<body>
+<div class="wrapper">
+<div class="container" >
+	<div class="heading" onclick="javascript:toggle('toggle_field');">FIELD EMPLOYEES</div>
+	<div id="toggle_field" class="hidden">
+		<div class="accordion">
+			<div class="accordion-section">
+				<a class="accordion-section-title" href="#accordion-1">Amtrak</a>
+				<div id="accordion-1" class="accordion-section-content">
+					<div class="cell"><img src="./img/Amtrak.jpg" class="imgSize"/></div>
+					<div class="cell">
+						<ol>
+							<li>e-RAILSAFE US (Canada)</li>
+							<li>AMTRAK Contractor Orientation</li>
+							<li>CPR/First Aid (US)</li>
+						</ol>
+					</div>
+				</div><!--end .accordion-section-content-->
+			</div><!--end .accordion-section-->
+
+			<div class="accordion-section">
+				<a class="accordion-section-title" href="#accordion-2">BA – Bart – Bay Area Rapid Transit</a>
+				<div id="accordion-2" class="accordion-section-content">
+				<div class="cell"><img src="./img/BA_Bart.png" class="imgSize"/></div>
+					<div class="cell">
+						<ol>
+							<li>e-RAILSAFE US (Canada)</li>
+							<li>BART Roadway Worker Protection (RWP)</li>
+						</ol>
+					</div>
+				</div><!--end .accordion-section-content-->
+			</div><!--end .accordion-section-->
+
+			<div class="accordion-section">
+				<a class="accordion-section-title" href="#accordion-3">BNSF</a>
+				<div id="accordion-3" class="accordion-section-content">
+				<div class="cell"><img src="./img/BNSF.jpg" class="imgSize"/></div>
+					<div class="cell">
+						<ol>
+							<li>e-RAILSAFE (US) (Canada)</li>
+							<li>BNSF Safety – Contractor Orientation</li>
+							<li>Roadway Workers Protection - Any
+								<ul>
+									<li>Not railroad specific for the BNSF</li>
+									<li>If you do not have any RWP certifications, you must complete the Online RWP class.</li>
+								</ul>
+							<li>CPR/First Aid (US)</li>
+						</ol>
+					</div>
+				</div><!--end .accordion-section-content-->
+			</div><!--end .accordion-section-->
+		</div><!--end .accordion-->
+	</div>
+</div>
+<div class="container" >
+	<div class="heading" onclick="javascript:toggle('toggle_hamel');">HAMEL-BASED EMPLOYEES</div>
+	<div id="toggle_hamel" class="hidden">
+		<div class="accordion">
+			<div class="accordion-section">
+				<a class="accordion-section-title" href="#accordion-a">Amtrak</a>
+				<div id="accordion-a" class="accordion-section-content">
+					<div class="cell"><img src="./img/Amtrak.jpg" class="imgSize"/></div>
+					<div class="cell">
+						<ol>
+							<li>e-RAILSAFE US (Canada)</li>
+							<li>AMTRAK Contractor Orientation</li>
+						</ol>
+					</div>
+				</div><!--end .accordion-section-content-->
+			</div><!--end .accordion-section-->
+
+			<div class="accordion-section">
+				<a class="accordion-section-title" href="#accordion-b">BA – Bart – Bay Area Rapid Transit</a>
+				<div id="accordion-b" class="accordion-section-content">
+					<div class="cell"><img src="./img/BA_Bart.png" class="imgSize"/></div>
+					<div class="cell">
+						<ol>
+							<li>e-RAILSAFE US (Canada)</li>
+							<li>BART Roadway Worker Protection (RWP)</li>
+						</ol>
+					</div>
+				</div><!--end .accordion-section-content-->
+			</div><!--end .accordion-section-->
+
+			<div class="accordion-section">
+				<a class="accordion-section-title" href="#accordion-c">BNSF</a>
+				<div id="accordion-c" class="accordion-section-content">
+					<div class="cell"><img src="./img/BNSF.jpg" class="imgSize"/></div>
+					<div class="cell">
+						<ol>
+							<li>e-RAILSAFE US (Canada) ()
+							<li>BNSF Safety – Contractor Orientation
+							<li>Roadway Workers Protection - Any
+								<ul>
+									<li>Not railroad specific for the BNSF
+									<li>If you do not have any RWP certifications, you must complete the Online RWP class.</li>
+								</ul>
+							</li>
+						</ol>
+					</div>
+				</div><!--end .accordion-section-content-->
+			</div><!--end .accordion-section-->
+		</div><!--end .accordion-->
+	</div>
+</div>
+</div>
+</body>
+</html>
